@@ -1,0 +1,32 @@
+{
+  "name": "tailwind-css",
+  "version": "1.0.0",
+  "description": "Tailwind CSS is a highly customizable, low-level utility-first CSS framework that provides a set of pre-designed utility classes to help developers quickly build and style their websites. It allows developers to create responsive designs and complex layouts without having to write custom CSS, as the framework provides a wide range of utility classes for common styles such as spacing, typography, colors, and more.",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server ./public",
+    "build:css": "postcss src/input.css -o public/styles.css",
+    "build:tailwindcss": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "build:css:prod": "cross-env NODE_ENV=production postcss src/input.css -o public/styles.css",
+    "build:css:prod:env": "dotenv -e .env postcss src/input.css -o public/styles.css --verbose"
+  },
+  "keywords": [
+    "tailwind, css, style, front-end"
+  ],
+  "author": "Jedidiah Solomon",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.2",
+    "dotenv-cli": "^7.4.2",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.4"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13"
+  }
+}
